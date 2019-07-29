@@ -1,0 +1,6 @@
+<launch>
+    <!-- Run the ekf for map to odom config -->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+        <rosparam command="load" file="$(find kalman_filter)/config/kalman_filter_config.yaml" />
+    </node>
+</launch>

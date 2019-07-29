@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- Run the navstar_transform to convert gnss sensor data -->
+    <include file="$(find kalman_filter)/launch/navsat.launch" />
+
+    <!-- Run the ekf for map to odom config -->
+    <include file="$(find kalman_filter)/launch/ekf.launch" />
+
+</launch>
