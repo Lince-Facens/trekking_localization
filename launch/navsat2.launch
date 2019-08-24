@@ -1,0 +1,16 @@
+<launch>
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" clear_params="true">
+    <rosparam command="load" file="$(find trekking_localization)/config/navsat_config.yaml" />
+
+      <remap from="gps/fix" to="/fix"/>
+      <remap from="imu/data" to="/xdk110/imu"/>
+      <!--remap from="imu/data" to="imu/data"/-->
+      <!-- Placeholders for input remapping. Set your topic names as the "to" values.
+      <remap from="imu/data" to=""/>
+      <remap from="odometry/filtered" to=""/>
+      <remap from="gps/fix" to=""/>
+      -->
+
+  </node>
+</launch>
+
