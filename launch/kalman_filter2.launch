@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- Run the navstar_transform to convert gnss sensor data -->
+    <include file="$(find trekking_localization)/launch/navsat2.launch" />
+
+    <!-- Run the ekf for map to odom config -->
+    <include file="$(find trekking_localization)/launch/ekf2.launch" />
+
+</launch>
